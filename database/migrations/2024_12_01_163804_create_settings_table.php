@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('settings', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('logo')->nullable;
-            $table->string('fivicon')->nullable;
-            $table->string('facebook')->nullable;
-            $table->string('instagram')->nullable;
-            $table->string('email')->nullable;
+            $table->string('logo')->nullable();
+            $table->string('fivicon')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('email')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

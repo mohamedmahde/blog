@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('category_id')->unsigned();
             $table->string('locale')->index();
-            $table->string('title')->nullable;       
+            $table->string('title')->nullable();       
             $table->unique(['category_id', 'locale']);
             $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('tag_id')->unsigned();
             $table->string('locale')->index();
-            $table->string('title')->nullable;               
+            $table->string('title')->nullable();               
             $table->unique(['tag_id', 'locale']);
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
         });
