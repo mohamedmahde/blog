@@ -9,7 +9,9 @@ use Astrotomic\Translatable\Translatable;
 
 class Setting extends Model implements TranslatableContract
 {
-    use HasFactory , Translatable;
+    use HasFactory, Translatable;
     public $translatedAttributes = ['title', 'content'];
-    public $fillable = ['id' ,'logo' ,'fivicon'  ,'facebook' ,'instagram' ,'email'];
+    public $fillable = ['id', 'logo', 'fivicon', 'facebook', 'instagram', 'email'];
+
+ 
 }

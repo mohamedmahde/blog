@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\dashboard\SettingController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -23,9 +25,10 @@ Route::get('/admin', function () {
 
 Route::get('/settings', function () {
     return view('dashboard.settings');
-});
+})->name('dashboard.settings');
 
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('dashboard/settings/update' , [SettingController ::class , 'update'])->name('settings.update');
